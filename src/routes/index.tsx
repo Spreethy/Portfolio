@@ -674,9 +674,6 @@ function Footer() {
   return (
     <footer className="border-t border-border/60 py-12 text-center">
       <div className="mx-auto max-w-6xl px-6">
-        <a href="#top" className="font-bold tracking-widest text-lg">
-          PREETHY<span className="text-primary">.</span>
-        </a>
         <p className="mt-4 text-sm text-muted-foreground">
           © {new Date().getFullYear()} Preethy Srinevasan. All rights reserved.
         </p>
