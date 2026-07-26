@@ -4,5 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   resolve: { tsconfigPaths: true },
-  plugins: [tanstackStart(), tailwindcss()],
+  base: "/Portfolio/",
+  plugins: [tanstackStart({ spa: { enabled: true } }), tailwindcss()],
 });
