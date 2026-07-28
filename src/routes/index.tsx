@@ -518,16 +518,19 @@ function Certifications() {
       title: "Introduction to Cloud Development with HTML, CSS, and JavaScript (CAD101EN)",
       org: "edX (IBM)",
       date: "Sep 2021",
+      link: "https://courses.edx.org/certificates/b2870ea1997c4ab38ef01ea1ad4ddee0",
     },
     {
       title: "Introduction to Data Science (DS0101EN)",
       org: "edX (IBM)",
       date: "Sep 2021",
+      link: "https://courses.edx.org/certificates/231648b431dc460f947c899b8ebc59d8",
     },
     {
       title: "Python Basics for Data Science (PY0101EN)",
       org: "edX (IBM)",
       date: "Sep 2021",
+      link: "https://courses.edx.org/certificates/9e15bd5b126743b3ac8c0e43e375a826",
     },
     {
       title: "Diploma in Information Technology",
@@ -544,8 +547,17 @@ function Certifications() {
             className="flex items-start gap-3 rounded-xl border border-border/60 bg-card/60 px-4 py-3"
           >
             <BadgeCheck className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-            <div>
-              <p className="text-sm font-medium">{c.title}</p>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-medium truncate">
+                {c.link ? (
+                  <a href={c.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors inline-flex items-center gap-1">
+                    {c.title}
+                    <ExternalLink className="h-3 w-3 shrink-0" />
+                  </a>
+                ) : (
+                  c.title
+                )}
+              </p>
               <p className="text-xs text-muted-foreground mt-0.5">
                 {c.org} · {c.date}
               </p>
