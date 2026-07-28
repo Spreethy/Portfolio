@@ -373,12 +373,13 @@ function Projects() {
     {
       title: "Explainable AI for Heart Disease Prediction using CNNs",
       year: "2025",
-      kind: "Individual Research Project",
+      kind: "Individual Research Project · Published at ICARC 2026 (IEEE)",
       bullets: [
-        "Developing a CNN-based model for heart disease prediction using ECG signals.",
-        "Integrating Explainable AI (XAI) techniques to enhance model interpretability and support reliable medical diagnoses.",
+        "Problem: Black-box deep learning models hinder clinical adoption of AI-based ECG diagnosis due to lack of interpretability.",
+        "Built a CNN-based model to detect heart disease from ECG signals, then integrated Explainable AI (XAI) techniques to visualize which signal features drive predictions.",
+        "Achieved transparent, interpretable diagnoses — enabling clinicians to trust and verify model decisions in real-world settings.",
       ],
-      tags: ["Python", "TensorFlow", "Keras"],
+      tags: ["Python", "TensorFlow", "Keras", "XAI"],
     },
     {
       title: "Faculty Feedback System of the University of Jaffna (Mobile Application)",

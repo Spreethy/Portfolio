@@ -79,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Preethy Srinevasan" },
       { name: "description", content: "Portfolio of Preethy Srinevasan, Computer Science graduate, full-stack developer and AI enthusiast based in Jaffna, Sri Lanka." },
       { name: "author", content: "Preethy Srinevasan" },
-      { property: "og:title", content: "Preethy Srinevasan — Software Engineer & AI Enthusiast" },
+      { property: "og:title", content: "Preethy Srinevasan — Software Engineer & Full-Stack Developer" },
       { property: "og:description", content: "Full-stack developer and AI enthusiast. Explore projects, publications, and experience." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
