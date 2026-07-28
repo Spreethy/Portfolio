@@ -28,7 +28,7 @@ import portrait from "@/assets/preethy.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Preethy Srinevasan — Software Engineer & Full-Stack Developer" },
+      { title: "Preethy Srinevasan" },
       {
         name: "description",
         content:

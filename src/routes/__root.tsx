@@ -76,7 +76,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Preethy Srinevasan — Software Engineer & AI Enthusiast" },
+      { title: "Preethy Srinevasan" },
       { name: "description", content: "Portfolio of Preethy Srinevasan, Computer Science graduate, full-stack developer and AI enthusiast based in Jaffna, Sri Lanka." },
       { name: "author", content: "Preethy Srinevasan" },
       { property: "og:title", content: "Preethy Srinevasan — Software Engineer & AI Enthusiast" },
@@ -89,7 +89,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+     { rel: "icon", href: "/Portfolio/favicon.ico?v=2", type: "image/x-icon" },
+      { rel: "icon", href: "/Portfolio/favicon.svg?v=7", type: "image/svg+xml" },
     ],
   }),
   shellComponent: RootShell,
