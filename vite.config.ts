@@ -7,4 +7,5 @@ export default defineConfig({
   resolve: { tsconfigPaths: true },
   base: "/Portfolio/",
   plugins: [tanstackStart({ spa: { enabled: true } }), react(), tailwindcss()],
+  server: { host: true, port: 5173 },
 });

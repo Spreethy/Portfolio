@@ -22,6 +22,7 @@ import {
   BookOpen,
   Sun,
   Moon,
+  Cpu,
 } from "lucide-react";
 import portrait from "@/assets/preethy.jpg";
 
@@ -82,7 +83,11 @@ function Nav() {
         <div className="flex items-center gap-6">
           <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
             {NAV.map((n) => (
-              <a key={n.href} href={n.href} className="hover:text-foreground hover:text-primary transition-colors">
+              <a
+                key={n.href}
+                href={n.href}
+                className="hover:text-foreground hover:text-primary transition-colors"
+              >
                 {n.label}
               </a>
             ))}
@@ -107,7 +112,10 @@ function Section({
     <section id={id} className="scroll-mt-24 py-20 px-6">
       <div className="mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-name)" }}>
+          <span
+            className="bg-clip-text text-transparent"
+            style={{ backgroundImage: "var(--gradient-name)" }}
+          >
             {title}
           </span>
         </h2>
@@ -205,17 +213,17 @@ function About() {
     { icon: Code2, label: "Full-Stack Developer" },
     { icon: Sparkles, label: "AI Enthusiast" },
     { icon: BookOpen, label: "Passionate Educator" },
+    { icon: Cpu, label: "IoT & Embedded Learner" },
   ];
   return (
     <Section id="about" title="About Me">
       <p className="text-center text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-        Computer Science graduand with Software Engineering internship experience in
-        full-stack web development using Angular, TypeScript, C#, .NET Web API, and
-        SQL Server. Passionate about software engineering, full-stack application
-        development, cloud technologies, and building scalable, reliable software
-        solutions.
+        Computer Science graduand with Software Engineering internship experience in full-stack web
+        development using Angular, TypeScript, C#, .NET Web API, and SQL Server. Passionate about
+        software engineering, full-stack application development, cloud technologies, and building
+        scalable, reliable software solutions.
       </p>
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
         {traits.map(({ icon: Icon, label }, i) => (
           <div
             key={label}
@@ -268,6 +276,18 @@ function Skills() {
       icon: Brain,
       title: "AI & Data Science",
       items: ["Machine Learning", "Deep Learning"],
+    },
+    {
+      icon: Cpu,
+      title: "Currently Learning",
+      items: [
+        "ESP32 / ESP32-S3",
+        "Arduino",
+        "Embedded C/C++",
+        "Sensor Integration (GPIO, ADC, I2C, UART, BLE)",
+        "GPS/GNSS, PPG, IMU",
+        "Real-Time Sensor Data Processing",
+      ],
     },
   ];
   return (
@@ -349,9 +369,7 @@ function Experience() {
                 </div>
                 <span className="text-sm text-muted-foreground">{e.period}</span>
               </div>
-              {e.summary && (
-                <p className="mt-3 text-muted-foreground">{e.summary}</p>
-              )}
+              {e.summary && <p className="mt-3 text-muted-foreground">{e.summary}</p>}
               <ul className="mt-3 space-y-2 text-muted-foreground text-sm">
                 {e.bullets.map((b) => (
                   <li key={b} className="flex gap-2">
@@ -380,6 +398,18 @@ function Projects() {
         "Achieved transparent, interpretable diagnoses — enabling clinicians to trust and verify model decisions in real-world settings.",
       ],
       tags: ["Python", "TensorFlow", "Keras", "XAI"],
+    },
+    {
+      title: "Inventory Management System",
+      year: "2026",
+      kind: "Individual Project · Laravel 12, PHP 8.2, SQLite, Tailwind, Alpine.js",
+      bullets: [
+        "Full inventory/stock system with RBAC (Admin/Staff), product catalog, categories, suppliers, and auditable stock movement ledger.",
+        "Low-stock alerts with auto-resolution, valuation/movement reports with CSV export, AI chat assistant (Gemini API) for natural-language data operations.",
+        "Stock consistency via DB transactions — all changes go through ledger, preventing negative stock.",
+      ],
+      tags: ["Laravel", "PHP", "SQLite", "Tailwind CSS", "Alpine.js", "Gemini API"],
+      link: "https://github.com/Spreethy/laravel-inventory-system",
     },
     {
       title: "Faculty Feedback System of the University of Jaffna (Mobile Application)",
@@ -420,6 +450,16 @@ function Projects() {
                 </span>
               ))}
             </div>
+            {p.link && (
+              <a
+                href={p.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-1 text-sm text-primary hover:underline"
+              >
+                View on GitHub <ExternalLink className="h-3 w-3" />
+              </a>
+            )}
           </Card>
         ))}
       </div>
@@ -460,14 +500,12 @@ function Achievements() {
 function Publications() {
   const pubs = [
     {
-      cite:
-        'P. Srinevasan and E. Y. A. Charles, "Explainable AI for Heart Disease Prediction Using CNNs," in Proceedings of the 6th International Conference on Advanced Research in Computing (ICARC), Belihuloya, Sri Lanka, IEEE, Feb. 2026, pp. 1–6.',
+      cite: 'P. Srinevasan and E. Y. A. Charles, "Explainable AI for Heart Disease Prediction Using CNNs," in Proceedings of the 6th International Conference on Advanced Research in Computing (ICARC), Belihuloya, Sri Lanka, IEEE, Feb. 2026, pp. 1–6.',
       doi: "10.1109/ICARC68737.2026.11453519",
       link: "https://ieeexplore.ieee.org/document/11453519/",
     },
     {
-      cite:
-        'P. Srinevasan and E. Y. A. Charles, "Explainable AI for Heart Disease Prediction Using CNNs," Abstract, Sri Lanka Student Workshop on Computer Science (SL-SWCS’25), Department of Computer Science, University of Jaffna, 2025.',
+      cite: 'P. Srinevasan and E. Y. A. Charles, "Explainable AI for Heart Disease Prediction Using CNNs," Abstract, Sri Lanka Student Workshop on Computer Science (SL-SWCS’25), Department of Computer Science, University of Jaffna, 2025.',
     },
   ];
 
@@ -480,9 +518,7 @@ function Publications() {
               <FileText className="h-5 w-5 text-primary mt-1 shrink-0" />
 
               <div>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {p.cite}
-                </p>
+                <p className="text-sm leading-relaxed text-muted-foreground">{p.cite}</p>
 
                 {p.doi && (
                   <p className="mt-2 text-sm">
@@ -550,7 +586,12 @@ function Certifications() {
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium truncate">
                 {c.link ? (
-                  <a href={c.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors inline-flex items-center gap-1">
+                  <a
+                    href={c.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors inline-flex items-center gap-1"
+                  >
                     {c.title}
                     <ExternalLink className="h-3 w-3 shrink-0" />
                   </a>
@@ -580,9 +621,7 @@ function Education() {
           </h3>
           <p className="text-primary">University of Jaffna</p>
           <p className="text-sm text-muted-foreground mt-2">2021 – 2025</p>
-          <p className="text-sm text-muted-foreground mt-1">
-            OGPA: 3.7 / 4.0 (First Class)
-          </p>
+          <p className="text-sm text-muted-foreground mt-1">OGPA: 3.71 / 4.0 (First Class)</p>
         </Card>
         <Card>
           <GraduationCap className="h-7 w-7 text-primary" />
@@ -591,7 +630,7 @@ function Education() {
           <p className="text-sm text-muted-foreground mt-2">2006 – 2019</p>
           <ul className="text-sm text-muted-foreground mt-2 space-y-1">
             <li>Mathematics Stream (2019): Mathematics – A, Chemistry – B, Physics – C</li>
-            <li>Z-score: 1.2616</li>
+            <li>Z-score: 1.2618</li>
             <li>G.C.E. Ordinary Level (2016): 9A</li>
           </ul>
         </Card>
@@ -690,7 +729,6 @@ function Footer() {
         <p className="mt-4 text-sm text-muted-foreground">
           © {new Date().getFullYear()} Preethy Srinevasan. All rights reserved.
         </p>
-       
       </div>
     </footer>
   );
