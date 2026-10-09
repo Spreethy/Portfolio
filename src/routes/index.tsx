@@ -33,13 +33,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Portfolio of Preethy Srinevasan — Computer Science graduand, full-stack developer with Angular, .NET, and SQL Server experience, based in Kondavil, Jaffna.",
+          "Portfolio of Preethy Srinevasan — Computer Science graduate, full-stack developer with Angular, .NET, and SQL Server experience, based in Kondavil, Jaffna.",
       },
       { property: "og:title", content: "Preethy Srinevasan — Portfolio" },
       {
         property: "og:description",
         content:
-          "Full-stack developer and Computer Science graduand. Explore projects, publications, and experience.",
+          "Full-stack developer and Computer Science graduate. Explore projects, publications, and experience.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -158,7 +158,7 @@ function Hero() {
             <span className="text-[color:var(--brand-coral)]">| Full-Stack Developer</span>
           </p>
           <p className="mt-2 text-lg text-muted-foreground animate-fade-up animation-delay-200">
-            Computer Science Graduand · University of Jaffna
+            Computer Science Graduate · University of Jaffna
           </p>
           <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/60 px-4 py-2 text-sm text-muted-foreground animate-fade-up animation-delay-300">
             <MapPin className="h-4 w-4 text-primary" />
@@ -218,10 +218,10 @@ function About() {
   return (
     <Section id="about" title="About Me">
       <p className="text-center text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-        Computer Science graduand with Software Engineering internship experience in full-stack web
-        development using Angular, TypeScript, C#, .NET Web API, and SQL Server. Passionate about
-        software engineering, full-stack application development, cloud technologies, and building
-        scalable, reliable software solutions.
+        Computer Science graduate from the University of Jaffna with Software Engineering internship
+        experience in full-stack web development using Angular, TypeScript, C#, .NET Web API, and
+        SQL Server. Passionate about software engineering, full-stack application development, cloud
+        technologies, and building scalable, reliable software solutions.
       </p>
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
         {traits.map(({ icon: Icon, label }, i) => (
@@ -470,6 +470,10 @@ function Projects() {
 function Achievements() {
   const items = [
     {
+      title: "Mr. Sabalingam Memorial Prize for Computer Science (Physical Science)",
+      desc: "Awarded for the Best Performance in Computer Science at the Special Degree Examination, University of Jaffna. (2023)",
+    },
+    {
       title: "Dean's List",
       desc: "1st Year (1G) and 2nd Year (2G), University of Jaffna.",
     },
@@ -627,11 +631,19 @@ function Education() {
           <GraduationCap className="h-7 w-7 text-primary" />
           <h3 className="mt-3 text-lg font-semibold">G.C.E. Advanced Level</h3>
           <p className="text-primary">Chundikuli Girls' College, Jaffna</p>
-          <p className="text-sm text-muted-foreground mt-2">2006 – 2019</p>
+          <p className="text-sm text-muted-foreground mt-2">2016 – 2019</p>
           <ul className="text-sm text-muted-foreground mt-2 space-y-1">
             <li>Mathematics Stream (2019): Mathematics – A, Chemistry – B, Physics – C</li>
             <li>Z-score: 1.2618</li>
-            <li>G.C.E. Ordinary Level (2016): 9A</li>
+          </ul>
+        </Card>
+        <Card>
+          <GraduationCap className="h-7 w-7 text-primary" />
+          <h3 className="mt-3 text-lg font-semibold">G.C.E. Ordinary Level</h3>
+          <p className="text-primary">Chundikuli Girls' College, Jaffna</p>
+          <p className="text-sm text-muted-foreground mt-2">2016</p>
+          <ul className="text-sm text-muted-foreground mt-2 space-y-1">
+            <li>9A</li>
           </ul>
         </Card>
       </div>
